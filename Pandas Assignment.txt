@@ -1,0 +1,142 @@
+PandasAssignment
+
+Q1. How do you load a CSV file into a Pandas DataFrame?
+
+By using pandas library 
+
+import pandas as pd
+
+df = pd.read_csv('data.csv')
+print(df) 
+
+
+Q2. How do you check the data type of a column in a Pandas DataFrame?
+
+using dtypes method  
+df = pd.read_csv('data.csv')
+df.dtype gives the datatype of the coulmns 
+
+Q3. How do you select rows from a Pandas DataFrame based on a condition?
+ We can select  the rows with the help of head and tail methods 
+df = pd.read_csv('data.csv')
+print(df.head(10)) #returns the first 10 rows
+print(df.tail(10)) #returns the last 10 rows
+ 
+
+Q4. How do you rename columns in a Pandas DataFrame?
+
+By using the  rename method on dataframe 
+
+df.rename(columns = {'oldcolumnname':'new_coulmn_name'}, inplace = True)
+
+
+Q5. How do you drop columns in a Pandas DataFrame?
+
+using the drop method on the coulmn  to be dropped 
+
+df.drop(['A'], axis=1)
+
+here droping the coulmn A
+
+Q6. How do you find the unique values in a column of a Pandas DataFrame?
+
+    df['Pclass'].unique()
+By using the unique mwthod on the coulumn  of the data frame 
+
+Q7. How do you find the number of missing values in each column of a Pandas DataFrame?
+BY performing isnull() method on the dataframe and then  using sum() to get the  count of missing values in the coulmn
+
+df.isnull().sum()
+
+Q8. How do you fill missing values in a Pandas DataFrame with a specific value?
+By using the method df.fillna(specicficvalue)  which repleces the missiing or empty values by specific vale
+
+Q9. How do you concatenate two Pandas DataFrames?
+
+Taking 2 indivijual data frames d1,d2 and using concat operation
+frames = [d1, d2]
+ 
+res1 = pd.concat(frames)
+res1
+     
+
+Q10. How do you merge two Pandas DataFrames on a specific column?
+To merge two Pandas DataFrames on a specific column, we  can use the merge() method.
+df_merged = pd.merge(df1, df2, on='col1')
+
+Q11. How do you group data in a Pandas DataFrame by a specific column and apply an aggregation function?
+using groupby function on dataframe and applying aggregrate function on top of it 
+df.groupby(['Name']).sum()
+
+here the name cloumn is grouped and sum gives the count of names 
+
+Q12. How do you pivot a Pandas DataFrame?
+
+in oder to pivot a Pandas DataFrame,  we can use the pivot() method. This method allows you to specify the columns  we want to use as the row and column indices,
+ and the values to fill in the data cells.
+
+ For example, suppose you have a DataFrame with three columns: A, B, and C. 
+You can pivot this DataFrame to create a new one that has A as the row index, B as the column index, and C as the values:
+
+df_pivot = df.pivot(index='A', columns='B', values='C')
+
+
+Q13. How do you change the data type of a column in a Pandas DataFrame?
+
+We can use astype() method to convert the type  here coulmn A type is changed from integer to strng 
+df['A'] = df['A'].astype('str')
+
+Q14. How do you sort a Pandas DataFrame by a specific column?
+
+df.sort_values(by=['column'])
+
+
+Q15. How do you create a copy of a Pandas DataFrame?
+newdf = df.copy()
+using the copy() method on dataframe df
+
+
+Q16. How do you filter rows of a Pandas DataFrame by multiple conditions?
+
+here we have applied some conditions on the dataframes df on col1 and col2 
+
+filtered_rows = df[(df['col1'] > 3) & (df['col2'] < 9)]
+
+
+Q17. How do you calculate the mean of a column in a Pandas DataFrame?
+
+here mean() method applied on the coulumn Age 
+df['Age'].mean()
+
+Q18. How do you calculate the standard deviation of a column in a Pandas DataFrame?
+by applying  std() method applied on the coulumn Age 
+df['Age'].std()
+
+Q19. How do you calculate the correlation between two columns in a Pandas DataFrame?
+using the corr() function 
+df['Age'].corr(df['Fare'])
+
+Q20. How do you select specific columns in a DataFrame using their labels?
+
+We can select specific colums using []  on the fataframe 
+
+ selected_columns = df[['col1', 'col3']]  # here selecting the coulmns 1 and column 3 wth labels
+
+Q21. How do you select specific rows in a DataFrame using their indexes?
+We can use .loc to select specific indexes  from data frame  eg :selected_rows = df.loc[[0, 2]]
+Q22. How do you sort a DataFrame by a specific column?
+
+df.sort_values(by=['column'])
+
+Q23. How do you create a new column in a DataFrame based on the values of another column?
+
+df['new_col'] = df['Survived'] 
+here new_col is created based on the values of another Survived
+
+
+Q24. How do you remove duplicates from a DataFrame?
+df.drop_duplicates() , by using drop_duplicates method 
+
+Q25. What is the difference between .loc and .iloc in Pandas?
+
+The main difference between pandas loc[] vs iloc[] is loc gets DataFrame rows & columns by labels/names and iloc[] gets by integer Index/position. 
