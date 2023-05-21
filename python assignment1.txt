@@ -1,0 +1,200 @@
+
+Q1. Why do we call Python as a general purpose and high-level programming language?
+	Python is called a general-purpose programming language because it can be used to develop a wide range of applications and solutions, 
+including web development, data analysis, scientific computing, etc , it abstracts away low-level details, providing simpler and more readable syntax 
+compared to low-level languages.
+
+Q2. Why is Python called a dynamically typed language?
+ Python is called a dynamically typed language because variable types are determined and checked during runtime,
+ rather than being explicitly declared or enforced during compilation.
+ 
+Q3. List some pros and cons of Python programming language?
+Pros of Python:
+
+Easy to read and write due to its clear and concise syntax.
+Extensive standard library and numerous third-party packages for various functionalities.
+Cross-platform compatibility, allowing Python programs to run on different operating systems.
+Strong community support and a large developer ecosystem.
+
+Cons of Python:
+
+Relatively slower execution speed compared to lower-level languages.
+Global interpreter lock (GIL) can limit the effectiveness of multithreading for CPU-bound tasks.
+Memory consumption can be higher compared to more memory-efficient languages.
+
+Q4. In what all domains can we use Python?
+Python can be used in various domains, including but not limited to:
+
+Web development: frameworks like Django and Flask.
+Data analysis and scientific computing: libraries like NumPy, Pandas, and SciPy.
+Machine learning and artificial intelligence: libraries like TensorFlow, PyTorch, and scikit-learn.
+Automation and scripting: for tasks such as system administration and workflow automation.
+Desktop GUI applications: using frameworks like PyQt or Tkinter.
+Network programming: using libraries like socket or requests.
+Game development: using libraries like Pygame.
+
+Q5. What are variable and how can we declare them?
+
+ A variable is a named reference to a value stored in memory. 
+ In Python, variables are dynamically typed,  You can declare a variable by assigning a value to it. 
+ 
+Q6. How can we take an input from the user in Python?
+A6. In Python, you can take input from the user using the input() function. It reads a line of text from the user as a string. 
+
+Q7. What is the default datatype of the value that has been taken as an input using input() function?
+	The default datatype of the value returned by the input() function is a string. 
+	
+Q8. What is type casting?
+	Type casting refers to the conversion of one data type to another. 
+
+Q9. Can we take more than one input from the user using single input() function? If yes, how? If no, why?
+
+ No, we cannot take multiple inputs from the user using a single input() function. The input() function reads a single line of text as input.
+ If we need multiple inputs, you can use input() multiple times.
+
+Q10. What are keywords?
+Keywords are reserved words in Python that have special meanings and purposes. 
+These words are part of the language syntax and cannot be used as identifiers (variable names, function names, etc.). 
+
+Q11. Can we use keywords as a variable? Support your answer with reason.
+ No, we cannot use keywords as variables in Python. Keywords have predefined meanings and are reserved for specific purposes in the language. 
+ If we try to use a keyword as a variable, we will get a syntax error.
+ 
+ 
+ Q12. What is indentation? What's the use of indentaion in Python?
+
+ Indentation refers to the spaces or tabs placed at the beginning of a line of code to define its level of indentation. 
+ In Python, indentation is used to indicate the grouping and structure of code blocks.
+ It is a fundamental part of the Python syntax and is used to define the scope of control flow statements, functions, classes, and other blocks of code.
+ 
+ Q13. How can we throw some output in Python?
+ To display output in Python, you can use the print() function. The print() function takes one or more arguments and prints them as output.
+ 
+Q14. What are operators in Python?
+ Operators in Python are symbols or special characters that perform operations on operands (values or variables). 
+ Python supports various types of operators, including arithmetic operators, comparison operators, assignment operators, logical operators,
+  Examples of operators in Python include +, -, *, /, %, ==, !=, =, and, or, etc.
+
+Q15. What is difference between / and // operators?
+ In Python, the / operator performs floating-point division, which means it returns the quotient as a floating-point number.
+ On the other hand, the // operator performs integer division, which returns the quotient as an integer (rounded down).
+
+Q16. Write a code that gives following as an output.
+```
+iNeuroniNeuroniNeuroniNeuron
+```
+A16. The following code will give the desired output:
+
+word = "Neuron"
+output = "i" + word
+output = output * 3 + word
+print(output)
+
+
+Q17. Write a code to take a number as an input from the user and check if the number is odd or even.
+
+number = int(input("Enter a number: "))
+if number % 2 == 0:
+    print("The number is even.")
+else:
+    print("The number is odd.")
+
+Q18. What are boolean operator?
+Boolean operators in Python are used to perform logical operations on Boolean values (True or False).
+ The three Boolean operators are and, or, and not.
+
+The and operator returns True if both operands are True.
+
+
+Q19. The output of the following code will be:
+
+
+1 or 0          -> 1
+0 and 0         -> 0
+True and False and True   -> False
+1 or 0 or 0     -> 1
+
+
+Q20. What are conditional statements in Python?
+
+ Conditional statements in Python are used to make decisions and execute different blocks of code based on certain conditions.
+ They allow the program to take different paths or perform different actions based on the truth or falsehood of specific expressions. 
+ The main conditional statements in Python are if, elif (short for "else if"), and else. 
+ 
+Q21. What is use of 'if', 'elif' and 'else' keywords?
+ The keywords if, elif, and else are used in conditional statements in Python:
+
+if is used to check a condition and execute a block of code if the condition is true.
+elif is used to add additional conditions to check after the initial if statement. It is used when there are multiple conditions to be evaluated.
+else is used as a final alternative in a conditional statement. It is executed when none of the previous conditions are true.
+
+Q22. Write a code to take the age of person as an input and if age >= 18 display "I can vote". If age is < 18 display "I can't vote".
+
+age = int(input("Enter your age: "))
+if age >= 18:
+    print("I can vote.")
+else:
+    print("I can't vote.")
+
+Q23. Write a code that displays the sum of all the even numbers from the given list.
+```
+numbers = [12, 75, 150, 180, 145, 525, 50]
+```
+	
+
+numbers = [12, 75, 150, 180, 145, 525, 50]
+sum_even = 0
+
+for num in numbers:
+    if num % 2 == 0:
+        sum_even += num
+print("Sum of even numbers:", sum_even)
+
+Q24. Here's a code that takes three numbers as input from the user and displays the greatest number as output:
+
+
+num1 = float(input("Enter the first number: "))
+num2 = float(input("Enter the second number: "))
+num3 = float(input("Enter the third number: "))
+
+if num1 >= num2 and num1 >= num3:
+    print("The greatest number is:", num1)
+elif num2 >= num1 and num2 >= num3:
+    print("The greatest number is:", num2)
+else:
+    print("The greatest number is:", num3)
+	
+Q25. Write a program to display only those numbers from a list that satisfy the following conditions
+
+- The number must be divisible by five
+
+- If the number is greater than 150, then skip it and move to the next number
+
+- If the number is greater than 500, then stop the loop
+```
+numbers = [12, 75, 150, 180, 145, 525, 50]
+
+numbers = [12, 75, 150, 180, 145, 525, 50]
+for num in numbers:
+    if num > 500:
+        break  # Stop the loop if number is greater than 500
+    if num > 150:
+        continue  # Skip numbers greater than 150
+    if num % 5 == 0:
+        print(num)
+Output:
+
+75
+50
+
+
+
+
+
+
+
+
+
+
+
+
